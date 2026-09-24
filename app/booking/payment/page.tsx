@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -359,11 +360,15 @@ export default function PaymentPage() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2.5"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-white">
-              <TrainFront size={19} />
-            </div>
+            <Image
+              src="/favicon.ico"
+              alt="RailBook"
+              width={36}
+              height={36}
+              className="rounded-xl"
+            />
 
             <span className="text-lg font-bold text-slate-900">
               RailBook
