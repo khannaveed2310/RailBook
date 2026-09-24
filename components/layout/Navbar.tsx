@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   Menu,
@@ -128,13 +129,15 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2.5"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-white">
-            <span className="text-sm font-bold">
-              R
-            </span>
-          </div>
+          <Image
+            src="/favicon.ico"
+            alt="RailBook"
+            width={36}
+            height={36}
+            className="rounded-xl"
+          />
 
           <span className="text-xl font-bold text-slate-900">
             RailBook

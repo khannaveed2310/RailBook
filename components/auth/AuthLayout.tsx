@@ -1,8 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
-  ArrowLeft,
   ShieldCheck,
-  TrainFront,
 } from "lucide-react";
 
 interface AuthLayoutProps {
@@ -24,11 +23,15 @@ export default function AuthLayout({
           <div>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-xl font-bold text-white"
+              className="inline-flex items-center gap-2.5 text-xl font-bold text-white"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600">
-                <TrainFront size={21} />
-              </div>
+              <Image
+                src="/favicon.ico"
+                alt="RailBook"
+                width={40}
+                height={40}
+                className="rounded-xl"
+              />
 
               RailBook
             </Link>
@@ -58,23 +61,17 @@ export default function AuthLayout({
 
         {/* Right */}
         <div className="flex min-h-screen flex-col">
-          <div className="p-5 sm:p-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-red-600"
-            >
-              <ArrowLeft size={16} />
-              Back to home
-            </Link>
-          </div>
-
-          <div className="flex flex-1 items-center justify-center px-5 pb-10 sm:px-8">
+          <div className="flex flex-1 items-center justify-center px-5 py-10 sm:px-8">
             <div className="w-full max-w-md">
               {/* Mobile logo */}
-              <div className="mb-8 flex items-center gap-2 lg:hidden">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white">
-                  <TrainFront size={21} />
-                </div>
+              <div className="mb-8 flex items-center gap-2.5 lg:hidden">
+                <Image
+                  src="/favicon.ico"
+                  alt="RailBook"
+                  width={40}
+                  height={40}
+                  className="rounded-xl"
+                />
 
                 <span className="text-xl font-bold text-slate-900">
                   RailBook

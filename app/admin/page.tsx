@@ -65,6 +65,9 @@ export default function AdminPage() {
 
   function handleLogout() {
     removeStorage(STORAGE_KEYS.AUTH);
+    window.dispatchEvent(
+      new Event("railbook-auth-change")
+    );
     router.replace("/login");
   }
 

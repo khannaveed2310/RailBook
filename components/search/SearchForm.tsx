@@ -27,6 +27,14 @@ interface SearchFormProps {
   initialDate?: string;
 }
 
+function getTodayDate(): string {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 export default function SearchForm({
   initialSource,
   initialDestination,
@@ -43,9 +51,11 @@ export default function SearchForm({
   const [to, setTo] =
     useState<Station | null>(null);
 
+  const today = getTodayDate();
+
   const [date, setDate] =
     useState(
-      initialDate || "2026-09-23"
+      initialDate || today
     );
 
   const [error, setError] =
@@ -214,7 +224,7 @@ export default function SearchForm({
             <input
               type="date"
               value={date}
-              min="2026-09-23"
+              min={today}
               onChange={(event) =>
                 setDate(
                   event.target.value

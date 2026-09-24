@@ -17,6 +17,9 @@ import {
   XCircle,
 } from "lucide-react";
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
 import {
   getStorage,
   setStorage,
@@ -160,32 +163,10 @@ export default function BookingsPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* =====================================================
-          HEADER
+          NAVBAR
       ===================================================== */}
 
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/"
-            className="flex items-center gap-2"
-          >
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-white">
-              <TrainFront size={19} />
-            </div>
-
-            <span className="text-lg font-bold text-slate-900">
-              RailBook
-            </span>
-          </Link>
-
-          <Link
-            href="/"
-            className="text-sm font-semibold text-slate-500 transition hover:text-red-600"
-          >
-            Search Trains
-          </Link>
-        </div>
-      </header>
+      <Navbar />
 
       {/* =====================================================
           MAIN
@@ -244,6 +225,8 @@ export default function BookingsPage() {
           </Link>
         </div>
       </main>
+
+      <Footer />
 
       {/* =====================================================
           CANCEL MODAL

@@ -51,18 +51,14 @@ function SearchContent() {
         setLoading(true);
         setError("");
 
-        console.log("Searching:", {
-          source,
-          destination,
-          journeyDate,
-        });
+
 
         const results = await searchTrains(
           source,
           destination
         );
 
-        console.log("Search results:", results);
+
 
         setTrains(results);
       } catch (error) {

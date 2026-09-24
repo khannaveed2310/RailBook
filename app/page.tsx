@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SearchForm from "@/components/search/SearchForm";
+import Image from "next/image";
 
 import {
   ArrowRight,
@@ -52,7 +53,13 @@ export default function HomePage() {
               {/* Hero content */}
               <div className="max-w-3xl">
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-300">
-                  <TrainFront size={14} />
+                  <Image
+                    src="/favicon.ico"
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="rounded"
+                  />
 
                   <span>
                     Simple. Fast. Reliable.
